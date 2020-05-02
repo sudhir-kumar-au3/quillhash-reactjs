@@ -23,6 +23,11 @@ class TradeChart extends React.Component {
       tooltips: {
         enabled: true,
       },
+      title: {
+        display: true,
+        text: "BTC-USD",
+        fontSize: 20
+    },
       scales: {
         xAxes: [
           {
@@ -31,7 +36,19 @@ class TradeChart extends React.Component {
               maxTicksLimit: 10,
             },
           },
+          {
+            scaleLabel: {
+              display: true,
+              labelString: 'Time axis'
+            }
+          }
         ],
+        yAxes: [{
+          scaleLabel: {
+            display: true,
+            labelString: 'USD equivalent of BTC'
+          }
+        }],
       },
     },
   };
